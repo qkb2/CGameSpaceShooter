@@ -1,11 +1,5 @@
-Game features code from Allegro Vivace semi-official game creation tutorial (credit to liballeg team) because pure C libraries for gamedev
-are mostly abandoned and this tutorial is still up to date, save for some mistakes in code, which I fixed - also I tidied the code up so
-that the files are split up -relatively- nicely.
-To compile the source code you must first download the Allegro5 library (via the repo or nuget in VS). For compiling with gcc the easiest
-way is to either use linux and e.g. apt or -if you are using Windows- to use msys2.
-Then to actually compile run:
-with gcc:
+Game features code from Allegro Vivace semi-official game creation tutorial (credit to liballeg team: https://github.com/liballeg/allegro_wiki/wiki/Allegro-Vivace-–-Gameplay) - that tutorial is still up to date, save for some mistakes in code, which I fixed (I don't remember which ones) - also I tidied the code up so that the files are split up (no audio and shooting stars tho, sorry - they're in TODO).
+To compile the source code you must first download the Allegro5 library (via the repo or nuget in VS - wiki: https://github.com/liballeg/allegro_wiki/wiki/Quickstart). For compiling with gcc the easiest way is to either use linux and a package manager like apt or (if you are using Windows) msys2. To actually compile run (with gcc):
 gcc main.c -o game $(pkg-config allegro-5 allegro_font-5 allegro_image-5 --libs --cflags)
-with cl (on VS) just compile the project.
-
+With cl (with VS) just compile the project you prepared (should work on VS 2015+, tested on MS VS 2019 with Allegro5 and compiled with cl). Remember that the game itself may need some DLL files which are included in the project by default.
 To play the game: press arrow keys to move, X to shoot and ESC to quit the game.
